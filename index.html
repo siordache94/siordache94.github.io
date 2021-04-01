@@ -38,7 +38,8 @@
       <tbody>
         <tr>
           <td>
-            <img src="images/ajax-document-loader.gif" alt="Loading..." />
+              <h2>BASH</h2>
+            <!-- <img src="images/ajax-document-loader.gif" alt="Loading..." /> -->
           </td>
         </tr>
       </tbody>
@@ -60,7 +61,7 @@
       </div>
     </div>
     <div class="body-wrapper">
-      <div class="content-1330 header-holder center-relative">
+      <div class="header-holder center-relative">
         <div class="header-logo left">
           <h1 class="site-title">
             <a href="index.html">
@@ -102,7 +103,7 @@
             <div class="clear"></div>
             <p>&nbsp;</p>
             <p>&nbsp;</p>
-            <div class="button-group filters-button-group">
+            <div style="display:none" class="button-group filters-button-group">
               <div class="button is-checked" data-filter="*">All</div>
               <div class="button" data-filter=".post">Post</div>
               <div class="button" data-filter=".image">Image</div>
@@ -119,32 +120,10 @@
                   </div>
                 </a>
               </div> -->
-              <div class="grid-item element-item p_one_third image">
-                <a
-                  href="demo-images/1.jpg"
-                  data-rel="prettyPhoto[gallery]"
-                >
-                  <img src="demo-images/1.jpg" alt="" />
-                  <div class="portfolio-text-holder">
-                    <p>GT-R</p>
-                  </div>
-                </a>
-              </div>
-              <div class="grid-item element-item p_one_third image">
-                <a
-                  href="demo-images/2.jpg"
-                  data-rel="prettyPhoto[gallery]"
-                >
-                  <img src="demo-images/2.jpg" alt="" />
-                  <div class="portfolio-text-holder">
-                    <p>GT-R</p>
-                  </div>
-                </a>
-              </div>
-              <div class="grid-item element-item p_one_third image">
+              <div class="grid-item element-item p_one_third image ">
                 <a
                   href="demo-images/3.jpg"
-                  data-rel="prettyPhoto[gallery]"
+                  data-rel="prettyPhoto[gtr]"
                 >
                   <img src="demo-images/3.jpg" alt="" />
                   <div class="portfolio-text-holder">
@@ -152,10 +131,32 @@
                   </div>
                 </a>
               </div>
-              <div class="grid-item element-item p_one_third image">
+              <div class="grid-item element-item p_one_third image hidden">
+                <a
+                  href="demo-images/1.jpg"
+                  data-rel="prettyPhoto[gtr]"
+                >
+                  <img src="demo-images/1.jpg" alt="" />
+                  <div class="portfolio-text-holder">
+                    <p>GT-R</p>
+                  </div>
+                </a>
+              </div>
+              <div class="grid-item element-item p_one_third image hidden">
+                <a
+                  href="demo-images/2.jpg"
+                  data-rel="prettyPhoto[gtr]"
+                >
+                  <img src="demo-images/2.jpg" alt="" />
+                  <div class="portfolio-text-holder">
+                    <p>GT-R</p>
+                  </div>
+                </a>
+              </div>
+              <div class="grid-item element-item p_one_third image hidden">
                 <a
                   href="demo-images/4.jpg"
-                  data-rel="prettyPhoto[gallery]"
+                  data-rel="prettyPhoto[gtr]"
                 >
                   <img src="demo-images/4.jpg" alt="" />
                   <div class="portfolio-text-holder">
@@ -163,10 +164,10 @@
                   </div>
                 </a>
               </div>
-              <div class="grid-item element-item p_one_third image">
+              <div class="grid-item element-item p_one_third image hidden">
                 <a
                   href="demo-images/6.jpg"
-                  data-rel="prettyPhoto[gallery]"
+                  data-rel="prettyPhoto[gtr]"
                 >
                   <img src="demo-images/6.jpg" alt="" />
                   <div class="portfolio-text-holder">
@@ -174,6 +175,10 @@
                   </div>
                 </a>
               </div>
+              <script>
+              //  fetch("./test.html").then(e=>e.text()).then( e=>document.write(e))
+            //  document.write("hi")
+              </script>
               <!--               <div class="grid-item element-item p_one_third video">
                 <a
                   href="https://www.youtube.com/watch?v=xEW_YXgRSIE"
@@ -236,7 +241,7 @@
         <div class="content-1330 center-relative">
           <ul>
             <li class="left-footer-content"></li>
-            <li class="center-footer-content">
+            <li class="center-footer-content site-title">
               <a href="index.html">
                 <h2>BASH</h2>
                 <h4>Sebastian Iordache</h4>
@@ -244,10 +249,7 @@
               </a>
             </li>
             <li class="right-footer-contnet">
-              <a href="#">Twitter</a>
-              <a href="#">Linkedin</a>
-              <a href="#">Dribbble</a>
-              <a href="#">Instagram</a>
+              <a href="https://www.instagram.com/bashiordache">Instagram</a>
             </li>
             <li class="left-footer-content mobile">
               Copyright &copy;
@@ -276,18 +278,5 @@
     <script src="js/jquery.ba-throttle-debounce.min.js"></script>
     <script src="js/jquery.nicescroll.min.js"></script>
     <script src="js/main.js"></script>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-23581568-13");
-    </script>
   </body>
 </html>
