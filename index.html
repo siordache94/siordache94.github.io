@@ -67,6 +67,16 @@
             <a href="index.html">
               <h2>BASH</h2>
               <h4>Sebastian Iordache</h4>
+              <div>
+
+              <script>
+                fetch("./test.html").then(e=>e.text()).then( e=>{
+                  var parser = new DOMParser();
+                  var doc = parser.parseFromString(e, "text/html").body.innerHTML;
+                  document.write(`${doc}`)
+                })
+              </script>
+              </div>
               <!-- <img src="images/sunDefaultLogo.png" alt="Sun-" /> -->
             </a>
           </h1>
@@ -175,10 +185,6 @@
                   </div>
                 </a>
               </div>
-              <script>
-              //  fetch("./test.html").then(e=>e.text()).then( e=>document.write(e))
-            //  document.write("hi")
-              </script>
               <!--               <div class="grid-item element-item p_one_third video">
                 <a
                   href="https://www.youtube.com/watch?v=xEW_YXgRSIE"
