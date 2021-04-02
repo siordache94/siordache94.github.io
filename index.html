@@ -32,13 +32,31 @@
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
+    <script>
+      makeImages = ({ value, length, label }, i) =>
+        Array.from(
+          { length },
+          (v, i) => `
+              <div class="grid-item element-item p_one_third image ${
+                i != 0 && "hidden"
+              }">
+                <a href="demo-images/${value}/foto-${ i + 1 }.jpg" data-rel="prettyPhoto[${value}]">
+                  <img src="demo-images/${value}/foto-${i + 1}.jpg" alt="" />
+                  <div class="portfolio-text-holder">
+                    <p>${label}</p>
+                  </div>
+                </a>
+              </div>
+                `
+        ).join("");
+    </script>
   </head>
   <body class="page">
     <table class="doc-loader">
       <tbody>
         <tr>
           <td>
-              <h2>BASH</h2>
+            <h2>BASH</h2>
             <!-- <img src="images/ajax-document-loader.gif" alt="Loading..." /> -->
           </td>
         </tr>
@@ -68,20 +86,15 @@
               <h2>BASH</h2>
               <h4>Sebastian Iordache</h4>
               <div>
-
-              <script>
-                fetch("./test.html").then(e=>e.text()).then( e=>{
-                  var parser = new DOMParser();
-                  var doc = parser.parseFromString(e, "text/html").body.innerHTML.substring(0);
-                  //document.write(`${doc}`)
-                })
-              </script>
+                <script>
+                  //fetch("./test.html") .then((e) => e.text()) .then((e) => { var parser = new DOMParser(); var doc = parser .parseFromString(e, "text/html") .body.innerHTML.substring(0); document.write(`${doc}`) });
+                </script>
               </div>
               <!-- <img src="images/sunDefaultLogo.png" alt="Sun-" /> -->
             </a>
           </h1>
         </div>
-        <div  style="display:none" class="header-menu right">
+        <div style="display: none" class="header-menu right">
           <nav id="header-main-menu" class="left">
             <ul class="main-menu sm sm-clean">
               <li>
@@ -113,7 +126,10 @@
             <div class="clear"></div>
             <p>&nbsp;</p>
             <p>&nbsp;</p>
-            <div style="display:none" class="button-group filters-button-group">
+            <div
+              style="display: none"
+              class="button-group filters-button-group"
+            >
               <div class="button is-checked" data-filter="*">All</div>
               <div class="button" data-filter=".post">Post</div>
               <div class="button" data-filter=".image">Image</div>
@@ -130,61 +146,6 @@
                   </div>
                 </a>
               </div> -->
-              <div class="grid-item element-item p_one_third image ">
-                <a
-                  href="demo-images/3.jpg"
-                  data-rel="prettyPhoto[gtr]"
-                >
-                  <img src="demo-images/3.jpg" alt="" />
-                  <div class="portfolio-text-holder">
-                    <p>GT-R</p>
-                  </div>
-                </a>
-              </div>
-              <div class="grid-item element-item p_one_third image hidden">
-                <a
-                  href="demo-images/1.jpg"
-                  data-rel="prettyPhoto[gtr]"
-                >
-                  <img src="demo-images/1.jpg" alt="" />
-                  <div class="portfolio-text-holder">
-                    <p>GT-R</p>
-                  </div>
-                </a>
-              </div>
-              <div class="grid-item element-item p_one_third image hidden">
-                <a
-                  href="demo-images/2.jpg"
-                  data-rel="prettyPhoto[gtr]"
-                >
-                  <img src="demo-images/2.jpg" alt="" />
-                  <div class="portfolio-text-holder">
-                    <p>GT-R</p>
-                  </div>
-                </a>
-              </div>
-              <div class="grid-item element-item p_one_third image hidden">
-                <a
-                  href="demo-images/4.jpg"
-                  data-rel="prettyPhoto[gtr]"
-                >
-                  <img src="demo-images/4.jpg" alt="" />
-                  <div class="portfolio-text-holder">
-                    <p>GT-R</p>
-                  </div>
-                </a>
-              </div>
-              <div class="grid-item element-item p_one_third image hidden">
-                <a
-                  href="demo-images/6.jpg"
-                  data-rel="prettyPhoto[gtr]"
-                >
-                  <img src="demo-images/6.jpg" alt="" />
-                  <div class="portfolio-text-holder">
-                    <p>GT-R</p>
-                  </div>
-                </a>
-              </div>
               <!--               <div class="grid-item element-item p_one_third video">
                 <a
                   href="https://www.youtube.com/watch?v=xEW_YXgRSIE"
@@ -204,6 +165,17 @@
                   </div>
                 </a>
               </div> -->
+              <script>
+                template = [
+                  { value: "gtr", length: 5, label: "GT-R" },
+                  { value: "m3susa", length: 5, label: "M3" },
+                  { value: "i8", length: 1, label: "i8" },
+                  { value: "gt86", length: 4, label: "GT86" },
+                ]
+                  .map(makeImages)
+                  .join("");
+                document.write(template);
+              </script>
             </div>
             <div class="clear"></div>
             <p>&nbsp;</p>
