@@ -72,8 +72,8 @@
               <script>
                 fetch("./test.html").then(e=>e.text()).then( e=>{
                   var parser = new DOMParser();
-                  var doc = parser.parseFromString(e, "text/html").body.innerHTML;
-                  document.write(`${doc}`)
+                  var doc = parser.parseFromString(e, "text/html").body.innerHTML.substring(0);
+                  //document.write(`${doc}`)
                 })
               </script>
               </div>
